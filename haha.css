@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*sometimes the computer does some padding and margin values
+    on its own so we make sure it doesn't by writing these*/
+}
+
+body{
+    background-image: url(bla.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* we use the fixed attachment to get rid of blank space(white space) */
+
+    background-position: center;
+    background-size: cover;
+    /*we use cover to make sure our background shrinks and expand with our window*/
+
+    text-align: center;
+}
+
+h1{
+    opacity: 0;
+    /* we put opacity at 0 so that our element doesn't appear until the animation starts*/
+
+    animation: zineb 3s  1s forwards;
+    /* animation: name, duration, delay, how many time it happens(this case only once), direction*/ 
+
+    text-shadow: -4px 4px 10px skyblue;
+    /* first number controles the shadow going to left(-) or right(+)*/
+    /* second number controles the shadow going to up(-) or down(+)*/
+    /* third number controles the shadow spreading*/
+
+    color: white;
+    font-size: 65px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+span{
+    color: skyblue;
+}
+
+p{
+    opacity: 0;
+    animation: zineb 3s  1.5s forwards;
+    color: white;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 25px;
+}
+
+button{
+    opacity: 0;
+    animation: zineb 3s  1.5s  forwards;
+    font-size: 20px;
+    color: rgb(7, 1, 57);
+    background-color: white;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 20px;
+    /* border redius is used to make the corners more round*/
+}
+
+@keyframes zineb {
+    /*keyframs is used to create out animation*/
+
+    0%{ 
+    /* 0% is how the animation starts*/
+    
+        opacity: 0;
+        transform: translateY(0px);
+        /*translateY is used to animate elements going up or down*/
+    }
+    100%{
+    /* 100% is how the animation ends*/
+
+        opacity: 1;
+        transform: translateY(30px);
+    }
+
+}
